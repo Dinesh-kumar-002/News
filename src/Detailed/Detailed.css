@@ -1,0 +1,23 @@
+.share-buttons button{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-bottom: 4px;
+  border: 0;
+  
+}
+.share-buttons button i{
+  font-size: 20px;
+  margin: 6px 1px 0 0;
+}
+.breadcrums{
+  display:flex;
+  list-style:none;
+  margin:0;
+  padding:0;
+  width:100%
+}
+
+.breadcrums li{
+  margin: 0 2px;
+}
