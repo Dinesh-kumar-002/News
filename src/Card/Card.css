@@ -9,6 +9,9 @@
         -webkit-box-orient: vertical;  
         overflow: hidden;
 }
+.card-body{
+    background-color: white;
+}
 .card-title{
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -17,4 +20,7 @@
 }
 .text-underline-offset-1{
     text-underline-offset: 2px;
+}
+.anchor{
+    color:#143d78 !important;
 }

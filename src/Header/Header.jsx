@@ -11,7 +11,7 @@ function Header() {
     <div>
         <nav className="navbar bg-body-tertiary">
         <div className="container-fluid">
-            <a className="navbar-brand fw-bold">News</a>
+            <a className="navbar-brand fw-bold">Hot News</a>
             <div className="user">
                 <i className="fa-solid fa-user"></i>
             </div>

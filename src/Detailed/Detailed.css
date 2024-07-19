@@ -21,3 +21,11 @@
 .breadcrums li{
   margin: 0 2px;
 }
+
+.main-container{
+  background:#01010f;
+}
+
+.title ,.new-content{
+  color: white;
+}

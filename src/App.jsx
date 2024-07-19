@@ -39,7 +39,7 @@ function App() {
     <Router>
       <>
         <Header />
-        <div className='container-fluid py-4' style={{ background:'#e5ffbda1'}}>
+        <div className='container-fluid py-4 main-container'>
           <div className="status">
             {status === 'fetching' && <Loader />}
             {status === 'failed' && (

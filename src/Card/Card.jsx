@@ -26,7 +26,7 @@ const Card = ({ news }) => {
                       <p className="card-text text-decoration-none">{item.description}</p>
                       <div className="d-flex justify-content-between">
                         <p className="card-publisher"><small className="text-body-secondary text-decoration-none">{item.publishedAt}</small></p>
-                        <span className='text-primary text-decoration-underline text-underline-offset-1'>Read more <i class="fa-solid fa-arrow-right"></i></span>
+                        <span className='anchor text-decoration-underline text-underline-offset-1'>Read more <i class="fa-solid fa-arrow-right"></i></span>
                       </div>
                     </div>
                   </div>

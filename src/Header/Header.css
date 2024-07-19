@@ -1,14 +1,14 @@
 .fa-user{
     padding: 10px 11px;
-    background-color: rgb(22, 22, 22);
+    background-color: rgb(255 255 255);
     border-radius: 50%;
     font-size: 25px;
     border: 1px solid rgb(255, 255, 255);
-    color: white;
+    color: #01010f;
 
 }
 .search-form input{
-    background-color: rgb(33, 33, 33);
+    background-color: rgb(255, 255, 255);
     border:0;
     box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.3);
     height: 50px;
@@ -30,4 +30,10 @@
 .search-form input::placeholder{
     color: rgb(129, 129, 129);
     font-weight: 100;
+}
+.navbar-brand{
+    color: white;
+}
+.navbar{
+    background-color: #01011c !important;
 }
