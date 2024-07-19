@@ -5,7 +5,7 @@ import { useParams, Link } from "react-router-dom";
 import noImage from '../assets/no-image.png';
 
 function Detailed({ news }) {
-  const [newsItem, setNewsItem] = useState(null);
+  const [ewsItenm, setNewsItem] = useState(null);
   const { id } = useParams();
 
   useEffect(() => {
