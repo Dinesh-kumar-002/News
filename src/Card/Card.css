@@ -4,15 +4,17 @@
     object-fit: cover;
 }
 .card-text{
+    color: #ffffff8a;
     display: -webkit-box;
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;  
         overflow: hidden;
 }
 .card-body{
-    background-color: white;
+    background-color: #01011c;
 }
 .card-title{
+    color:white;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
@@ -22,5 +24,8 @@
     text-underline-offset: 2px;
 }
 .anchor{
-    color:#143d78 !important;
+    color:green !important;
+}
+.text-body-light{
+    color: #ffffff8a;
 }

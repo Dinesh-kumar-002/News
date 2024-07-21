@@ -13,22 +13,37 @@ function App() {
   const [status, setStatus] = useState('fetching');
   const [error, setError] = useState('');
 
-  const fetchNews = async () => {
-    try {
-      const result = await axios.get('https://gnews.io/api/v4/top-headlines?category=general&apikey=5abf4e5d89fb6c7a0032546ed7a6419a');
-      if (result.data.articles) {
-        console.log(result.data.articles);
-        const response = result.data.articles;
-        response.forEach((element, index) => {
-          element.id = index + 1;
-        });
-        setNews(response);
-        setStatus('success');
+  const fetchNews = async (val) => {
+    let result;
+  
+      try {
+
+        if(val){
+       result = await axios.get(`https://gnews.io/api/v4/search?q=${val}&lang=ta&country=in&apikey=868207df6f77c941aa8bd9b68f0f5d66`);
+       
+        }
+        else{
+          result = await axios.get('https://gnews.io/api/v4/top-headlines?category=general&lang=ta&country=in&max=25&apikey=868207df6f77c941aa8bd9b68f0f5d66');
+        
+        }
+
+        if(result.length==0){
+          setStatus("empty");
+        }
+        else if (result.data.articles) {
+          console.log(result.data.articles);
+          const response = result.data.articles;
+          response.forEach((element, index) => {
+            element.id = index + 1;
+          });
+          setNews(response);
+          setStatus('success');
+        }
+      } catch (error) {
+        setError(error.response?.data?.errors[0] || 'An error occurred');
+        setStatus('failed');
       }
-    } catch (error) {
-      setError(error.response?.data?.errors[0] || 'An error occurred');
-      setStatus('failed');
-    }
+
   };
 
   useEffect(() => {
@@ -38,16 +53,12 @@ function App() {
   return (
     <Router>
       <>
-        <Header />
+        <Header fetchNews={fetchNews}/>
         <div className='container-fluid py-4 main-container'>
           <div className="status">
             {status === 'fetching' && <Loader />}
-            {status === 'failed' && (
-              <div>
-                <h1 className='text-center' style={{ fontSize: '35px' }}>😪</h1>
-                {error}
-              </div>
-            )}
+            {status === 'empty' &&  <div><h1 className='text-center' style={{ fontSize: '35px' }}>No result found</h1></div>}
+            {status === 'failed' && (<div><h1 className='text-center' style={{ fontSize: '35px' }}>😪</h1>{error}</div>)}
           </div>
           <Routes>
             <Route path="/" element={<Card news={news} />} />

@@ -37,3 +37,26 @@
 .navbar{
     background-color: #01011c !important;
 }
+select{
+    border-radius: 0 !important;
+    outline: 0 !important;
+    box-shadow: 0 !important
+}
+
+.form-select:focus {
+    border: none;
+    outline: 0;
+    box-shadow: none !important;
+}
+
+.search-form input:focus{
+    background-color: white !important;
+    color: rgb(48, 48, 48) !important;
+}
+
+select {
+    background: #01011c !important;
+    border: 0 !important;
+    padding: 12px 20px;
+    color: white !important;
+}
